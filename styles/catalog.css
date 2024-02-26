@@ -1,0 +1,98 @@
+/*Catalog Page*/
+/*Mobile-First Design*/
+.catalog{
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    background-color: #D886AF;
+    padding: 20px;
+           
+}
+
+.bookimage{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.8s ease;
+    width: 200px;
+}
+
+.book{
+    display: grid;
+    grid-template-rows: auto;
+    place-items: center;    
+}
+
+.details>h3{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #4B3A5E;
+    letter-spacing: 1px;
+    padding-top: 10px;
+}
+.details>h4{
+    font-weight: 300;
+}
+
+.details>p{
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.details{
+    text-align: center;
+}
+
+.add{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #E2AE3D;
+    color: white;
+    font-family: poppins;
+    font-size: 18px;
+    border: none;
+    border-radius: 24px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.8s ease;
+}
+
+.add:hover {
+    box-shadow: 0 8px 16px 0 black;
+
+}
+
+/*Tablet CSS*/
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+.catalog{
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.bookimage{
+    height: max-content;
+    width: 100px;
+}
+.details>h3{
+    font-size: 14px;
+    }
+    .details>h4{
+        font-size: 12px;
+}
+
+.details>p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.add{
+    font-size: 14px;
+}
+}
+/*Laptop CSS*/
+
+@media screen and (min-width: 1024px) {
+    .catalog{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
