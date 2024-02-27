@@ -2,6 +2,8 @@
 body {
     font-family: Poppins;  
     height: fit-content;
+    
+
 }
 
 /* header*/
@@ -42,24 +44,24 @@ header {
 
 .hero {
     background-color: #4B3A5E;
-    display: grid;
+    display: inline-grid;
     padding: 15px;
     color: white;
     line-height: 1.5;
-    justify-items: center;
-    grid-template-areas: 
-    'first first' 
-    'second third'
-    'fourth fourth'
-    'fifth fifth'
-    'sixth sixth';
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 56% 44%;
+
+    
 }
 
 .firstline {
     font-size: 20px;
     font-weight: 400;
     line-height: 0.5;
-    grid-area: first;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+
 }
 
 .secondline{
@@ -67,8 +69,12 @@ header {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: -1px;
-    grid-area: second;
-    justify-self: end;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: flex-end;
+    
+    
+
 }
 .club {
     font-size: 32px;
@@ -76,16 +82,20 @@ header {
     font-weight: 500;
     letter-spacing: -1px;
     color: #E2AE3D;
-    grid-area: third;
+    grid-column: 2/3;
+    grid-row: 2/3;
     justify-self: start;
+    text-align: end;
 }
 
 .hero>p{
     font-size: 12px;
     font-weight: 300;
-    grid-area: fourth;
+    grid-column: 1/3;
+    grid-row: 3/4;
     text-justify: inter-word;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .enternow{
@@ -97,7 +107,8 @@ header {
     font-size: 14px;
     border: none;
     border-radius: 24px;
-    grid-area: fifth;
+    grid-column: 1/3;
+    grid-row: 4/5;
     padding: 6px;
     padding-left: 20px;
     padding-right: 20px;
@@ -107,13 +118,15 @@ header {
 
 .enternow:hover {
     box-shadow: 0 8px 16px 0 #E2AE3D;
-
 }
 
 .heroimage {
-    width: 80%;
-    grid-area: sixth;
+    display: grid;
     padding: 5px;
+    grid-column: 1/3;
+    grid-row: 5/6;
+    justify-self: center;
+    
 }
 /*footer*/
 
@@ -133,8 +146,9 @@ footer{
 }
 
 /*Tablet CSS*/
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 768px) {
 /*header*/
+
  header{
         flex-direction: row;
         justify-content: space-around;
@@ -148,7 +162,7 @@ footer{
     }
 
     .cosmic, .books {
-        display: flex;
+        display: grid;
         text-transform: uppercase;
         color: #E2AE3D;
         font-size: 24px;
@@ -171,42 +185,46 @@ footer{
     padding-bottom: 80px;
     padding-left: 50px;
     padding-right: 50px;
-    grid-template-areas: 'first image image'
-                         'second image image'
-                         'text image image'
-                         'button image image';
-                        }
- 
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 10% 10% 70% 10%;
+}
+
     
     .firstline {
         font-size: 32px;
-        grid-area: first;
+        grid-row: 1/2;
+        grid-column: 1/3;
     }
     
     .secondline{
         font-size: 36px;
-        justify-self: flex-start;
-        grid-area: second;
+        justify-self: first baseline;
+        align-self: center;
         line-height: 0;
+        grid-row: 2/3;
+        grid-column: 1/2;
 
     }
     .club {
         font-size: 36px;
-        grid-area: second;
         padding-left: 140px;
-        line-height: 0;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        align-self: center;
     }
     
     .hero>p{
         font-size: 14px;
-        grid-area: text;
-    }
+        text-align: start;
+        align-self: center;
+        grid-row: 3/4;
+        grid-column: 1/2;  
+      }
     
     .enternow{
         font-size: 16px;
-        grid-area: button;
-        height: min-content
-           
+        grid-row: 4/5;
+        grid-column: 1/3;
     }
     
     .enternow:hover {
@@ -215,13 +233,14 @@ footer{
     }
     
     .heroimage {
-        grid-area: image;
-        justify-self: center;
         width: 100%;
+        justify-self: center;
+        grid-row: 1/5;
+        grid-column: 2/ 4;
     }
 }
 /*Laptop CSS*/
-@media screen and (min-width: 1024px)  {
+@media only screen and (min-width: 1024px)  {
     /*header*/
    
     header{
@@ -236,23 +255,15 @@ footer{
     }
 
 /*hero*/
-.hero {
-    grid-template-rows: 50px 50px 150px 100px;
-    grid-template-columns: 50%;
-    padding-left: 80px;
+    .hero {
     padding-right: 80px;
-}     
+    }     
     .firstline {
         font-size: 36px;
-        grid-area: first;
-       
     }
-    
-    .secondline{
+        .secondline{
         font-size: 40px;
-       
-
-    }
+          }
     .club {
         font-size: 40px;
         padding-left: 158px;
@@ -261,12 +272,9 @@ footer{
     
     .hero>p{
         font-size: 16px;
-
-    }
-    
+    }   
     .enternow{
         font-size: 18px;
-
            
     }
     
@@ -276,9 +284,7 @@ footer{
     }
     
     .heroimage {
-        grid-area: image;
         justify-self: center;
-        width: 80%;
 
     }
    
