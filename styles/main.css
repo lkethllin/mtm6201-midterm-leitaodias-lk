@@ -1,9 +1,9 @@
 /*Mobile First*/
+html{
+    width: fit-content;
+}
 body {
-    font-family: Poppins;  
-    height: fit-content;
-    
-
+    font-family: Poppins;
 }
 
 /* header*/
