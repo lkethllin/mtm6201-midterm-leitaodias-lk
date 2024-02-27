@@ -84,7 +84,6 @@ header {
     font-size: 12px;
     font-weight: 300;
     grid-area: fourth;
-    text-align: justify;
     text-justify: inter-word;
     padding-bottom: 10px;
 }
@@ -129,7 +128,7 @@ footer{
     align-items: center;
 }
 
-footer>h3{
+.footer{
     padding: 12px;
 }
 
@@ -206,7 +205,7 @@ footer>h3{
     .enternow{
         font-size: 16px;
         grid-area: button;
-        height: min-content;
+        height: min-content
            
     }
     
