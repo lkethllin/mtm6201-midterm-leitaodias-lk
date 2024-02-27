@@ -20,7 +20,7 @@
     place-items: center;    
 }
 
-.details>h3{
+.details>h1{
     font-size: 24px;
     text-transform: uppercase;
     font-weight: 800;
@@ -28,7 +28,7 @@
     letter-spacing: 1px;
     padding-top: 10px;
 }
-.details>h4{
+.details>h2{
     font-weight: 300;
 }
 
@@ -46,7 +46,7 @@
     text-decoration: none;
     text-transform: uppercase;
     background-color: #E2AE3D;
-    color: white;
+    color: black;
     font-family: poppins;
     font-size: 18px;
     border: none;
@@ -73,10 +73,10 @@
     height: max-content;
     width: 100px;
 }
-.details>h3{
+.details>h1{
     font-size: 14px;
     }
-    .details>h4{
+    .details>h2{
         font-size: 12px;
 }
 
