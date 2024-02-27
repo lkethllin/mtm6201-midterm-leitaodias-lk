@@ -124,9 +124,10 @@ form{
 .formcontainer{
     margin-left: 0;
 }
+}
 /*Laptop CSS*/
 
-@media screen and (min-width: 1024px) and (max-width:1440px) {
+@media screen and (min-width: 1024px)  {
     .contact{
         padding-left: 80px;
         padding-right: 80px;
