@@ -103,7 +103,7 @@ grid-template-columns: 40% 60%;
 }
 .login{
     grid-area: image;
-    width: calc(100% + 1.5625vw);
+    width: calc(90% + 1.5625vw);
     padding: 0;
 }
 .library{
