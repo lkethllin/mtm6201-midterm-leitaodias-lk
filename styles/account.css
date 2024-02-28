@@ -115,6 +115,9 @@ grid-template-columns: 40% 60%;
     justify-self: start;
     font-size: calc(10px + 1.5625vw);
 }
+.icon{
+    height: calc(30px + 1.5625vw);
+}
 h2{
     grid-area: login;
     justify-self: start;
