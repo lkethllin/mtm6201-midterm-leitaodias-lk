@@ -10,11 +10,11 @@
 </head>
 <body>
     <header>
-        <picture>
+        <picture class="logopic">
             <source media="(max-width: 425px)" srcset="../assets/logoname.png" >
             <img class="logo" src="../assets/LOGO.png" alt="cosmicbookslogo">
         </picture>
-        <p class="cosmic">Cosmic</p><p class="books">Books</p>
+        <p class="cosmic">Cosmic<span class="cosmicC" style="font-weight: 700;">Books</span></p>
         <a class="nav" href="index.html">Home</a>
         <a class="nav" href="catalog.html">Catalog</a>
         <a class="nav" href="account.html">Account</a>
@@ -25,14 +25,14 @@
         <form>
         <div class="formcontainer">
         <picture class="vector">
-        <source media="(min-width: 767px)" srcset="../assets/iconsmall.jpg">
+        <source media="(max-width: 767px)" srcset="../assets/iconsmall.png">
             <img class="icon" src="../assets/icon.png" alt="account icon">
         </picture>
             <input type="text" aria-label="Your Username" id="username" name="username" value="Your Username">
         </div>
         <div class="formcontainer">
             <picture class="vector">
-            <source media="(min-width: 767px)" srcset="../assets/password iconsmall.jpg">
+            <source media="(max-width: 767px)" srcset="../assets/password iconsmall.png">
             <img class="icon" src="../assets/password icon.png" alt="password icon">
             </picture>
             <input type="text" aria-label="Your Password" id="password" name="password" value="Enter Password">
@@ -41,7 +41,7 @@
             <input type="submit" value="Sign Up" id="signbutton">
         </form>
         <picture class="library">
-        <source media="(min-width: 767px)" srcset="../assets/accountsmall.jpg">
+        <source media="(max-width: 767px)" srcset="../assets/accountsmall.png">
         <img class="login" src="../assets/account.png" alt="loginpage">
         </picture>
     </main>

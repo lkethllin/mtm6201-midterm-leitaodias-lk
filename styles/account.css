@@ -3,18 +3,16 @@
 .contact{
     background-color: #E2AE3D;
     color:#4B3A5E;
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 20px;
     text-align: center;
-    
- }
+     }
 
 .contact>h1{
     font-size: 18px;
     font-weight: 600;
-    
 }
 
 h2{
@@ -25,15 +23,14 @@ h2{
 .formcontainer{
     display: flex;
     background-color: white;
-    margin: 10px;
-    
+    margin: 10px;  
 }
 input#password, input#username{
     font-family: poppins;
     border: none;
     color: #4B3A5E;
+    font-size: calc(2px + 1.5625vw);
 }
-
 .icon{
     height:30px;
 }
@@ -76,12 +73,13 @@ input#password, input#username{
 }
 #loginbutton:hover {
     box-shadow: 0 8px 16px 0 black;
-
 }
 
 .login{
-    width: 80%;
     padding-top: 10px;
+}
+.library{
+    order: -1;
 }
 
 footer{
@@ -92,33 +90,40 @@ footer{
 /*Tablet CSS*/
 @media only screen and (min-width: 768px){
 .contact{
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 80px;
+    padding-left: calc(40px + 2.5625vw);
+    padding-right: calc(40px + 2.5625vw);
+    padding-top: 60px;
+    padding-bottom: 0;
     display: grid;
     grid-template-areas: 'title image'
                          'login image'
                          'form image';
-grid-template-rows: 25px 25px;
-grid-template-columns: 40% 60%;                        
+grid-template-rows: 5% 5% 40%;
+grid-template-columns: 40% 60%;                    
 }
 .login{
     grid-area: image;
-    justify-self: end;
+    width: calc(100% + 1.5625vw);
     padding: 0;
+}
+.library{
+   width: 80%;
+   justify-self: end;
 }
 .contact>h1{
     grid-area: title;
     justify-self: start;
-
+    font-size: calc(10px + 1.5625vw);
 }
 h2{
     grid-area: login;
     justify-self: start;
+    font-size: calc(4px + 1.5625vw);
 }
 
 form{
     grid-area: form;
+    align-self: center ;
     
 }
 .formcontainer{
@@ -128,14 +133,11 @@ form{
 /*Laptop CSS*/
 
 @media screen and (min-width: 1024px)  {
-    .contact{
-        padding-left: 80px;
-        padding-right: 80px;
-    
-    }
-    .contact>h1{
-        font-size: 24px;
-        
-    }
-    
+#loginbutton{
+    font-size: calc(4px + 1.5625vw);
 }
+#signbutton{
+    font-size: calc(4px + 1.5625vw);
+}
+}
+    
